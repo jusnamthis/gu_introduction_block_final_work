@@ -2,7 +2,7 @@
 using static StringArrayWorker;
 
 string[] arr = 10.Create()
-                  .FillWithRandomStrings()
+                  .FillWithRandomStrings(0, 10, 1)
                   .Print();
 
 string[] lessThan = arr.GetValuesLessThanLength(3)

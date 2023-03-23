@@ -36,7 +36,7 @@ public static class StringArrayCreator
     /// <returns>The array received for filling</returns>
     public static string[] FillWithRandomStrings(this string[] arr, int minStrLen = 1, int maxStrLen = 9, int seek = 0)
     {
-        Random rnd = new Random(seek);
+        Random rnd = seek > 0 ? new Random() : new Random(seek);
 
         for (int i = 0; i < arr.Length; i++)
         {
